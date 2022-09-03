@@ -1,17 +1,27 @@
 #hot to know if a year is a leap year(como saber si un año es bisiesto) 
-monto=int(input("ingresa monto de compra:"))
-if monto>=10 :
-    while monto%10==0:
-        num=monto//10
-        boni=num*2
-        break
-    while monto%10!=0:
-        num=monto//10
-        boni=num*2+1
-        break
+mes=int(input("ingrese el numero de mes (segun su orden) :"))
+anio=int(input("ingrese el año:"))
+
+if anio%4==0 and anio%100!=0 or anio%400==0 :
+    m=29
+    print("el año es bisiesto")
 else:
-    boni=1
+    m=28
+    print("el año no es bisiesto")
 
-print("la cantidad de puntos que obtendra por la compra es:",boni)
-  
+match mes:
+    case 1:mes="Enero";dia=31
+    case 2:mes="Febrero";dia=m
+    case 3:mes="Marzo";dia=31
+    case 4:mes="Abril";dia=30
+    case 5:mes="Mayo";dia=31
+    case 6:mes="Junio";dia=30
+    case 7:mes="Julio";dia=31
+    case 8:mes="Agosto";dia=31
+    case 9:mes="Septiembre";dia=30
+    case 10:mes="Octubre";dia=31
+    case 11:mes="Noviembre";dia=30
+    case 12:mes="Diciembre";dia=31
+    case _:print("fuera de rango")
 
+print(mes,"\t",anio,"\t", dia)
