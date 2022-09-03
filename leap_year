@@ -1,0 +1,17 @@
+#hot to know if a year is a leap year(como saber si un año es bisiesto) 
+monto=int(input("ingresa monto de compra:"))
+if monto>=10 :
+    while monto%10==0:
+        num=monto//10
+        boni=num*2
+        break
+    while monto%10!=0:
+        num=monto//10
+        boni=num*2+1
+        break
+else:
+    boni=1
+
+print("la cantidad de puntos que obtendra por la compra es:",boni)
+  
+
