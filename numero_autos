@@ -1,0 +1,15 @@
+#numeros de autos de carro por color dependiendo del ultimo digito, se sumaran para contar el total.
+cont1=cont2=cont3=cont4=cont5=0;
+n=int(input("ingrese el total de autos:"))
+for x in range (1,n+1,1):
+    digito=x%10
+    match digito:
+        case digito if digito==1 or digito==2:cont1=cont1+1;color="Amarilla"
+        case digito if digito==3 or digito==4:cont2=cont2+1;color="Negro"
+        case digito if digito==5 or digito==6:cont3=cont3+1;color="Rojo"
+        case digito if digito==7 or digito==8:cont4=cont4+1;color="verde"
+        case digito if digito==9 or digito==0:cont5=cont5+1;color="Azul"
+        
+print("\nlos autos que entran de cada color son:")
+print("amarillo\tnegro\trojo\tverde\tazul")
+print("%5d %13d  %5d   %5d   %5d" %(cont1,cont2,cont3,cont4,cont5))
