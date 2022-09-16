@@ -1,0 +1,17 @@
+tipo=input("ingrese el tipo de seguro A/B/C/D :").upper()
+per=int(input("ingresa el numero de personas :"))
+
+match tipo:
+    case "A" if per<=8 :pago=120;panual=pago*12
+    case "B" if per<=6: pago=100;panual=pago*12
+    case "C" if per<=4: pago=80;panual=pago*12
+    case "D" if per<=2: pago=60;panual=pago*12
+
+match tipo:
+    case "A" if per>8:tper=per-8 ;pago=120+tper*8
+    case "B" if per>6:tper=per-6 ;pago=100+tper*8
+    case "C" if per>4:tper=per-4 ;pago=80+tper*5
+    case "D" if per>2:tper=per-2 ;pago=60+tper*5
+panual=pago*12
+print("el pago mensual es:",pago)
+print("el pago anual seria:",panual)
